@@ -1,6 +1,8 @@
 <?php
 
 /*
+  Copied and modified from CiviCRM's Participant Summary report.
+ 
   +--------------------------------------------------------------------+
   | CiviCRM version 4.1                                                |
   +--------------------------------------------------------------------+
@@ -172,6 +174,7 @@ class CRM_Report_Form_Event_Trip extends CRM_Report_Form {
             'title' => ts('Participant Status'),
             'operatorType' => CRM_Report_Form::OP_MULTISELECT,
             'options' => CRM_Event_PseudoConstant::participantStatus(null, null, 'label'),
+            'default' => '1,2',
           ),
           'rid' => array(
             'name' => 'role_id',

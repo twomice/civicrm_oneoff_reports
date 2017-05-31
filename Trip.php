@@ -728,6 +728,7 @@ class CRM_Report_Form_Event_Trip extends CRM_Report_Form {
       $api_params = array(
         'version' => 3,
         'role_id' => $rid,
+        'status_id' => array('IN' => array("Registered", "Attended")),
         'event_id' => $event_id,
         'rowCount' => 100, // in case there are more than 25 rows, we need to overcome the civicrm api limit.
         'return.custom_27' => 1, // participant medical
